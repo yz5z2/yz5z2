@@ -1,3 +1,3 @@
-#Video Comments
+# Video Comments
 In this video meeting, they mainly talked about the release the new metrics. The meeting first review the last metrics
 and talked about how this metrics going on like create tags and release cycles ect. Then the talked about how the metric like function changing the content. They also create the new metrics named new metric inactive contributor. And they talked about the aggregators and templates should be bold not be heading, that will be much more understandable. After this meeting, I know more about how to deal with the new metric release and how can make the metric more sence to the custormers and coworkers. 
