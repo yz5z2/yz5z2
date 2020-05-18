@@ -1,6 +1,7 @@
 # FINAL PROJECT DOCUMENTATION
 # Order System
 The project name is Order System, it is a restaurant ordering platform for sellers and buyers. The following will introduce the project structure.
+
 UI: This project was created using JavaFX，there are four .fxml documents in the project including BuyerLayout.fxm, SellerLayout.fxml, RegistLayout.fxml and
 LoginLayout.fxml
 ## Architecture: 
