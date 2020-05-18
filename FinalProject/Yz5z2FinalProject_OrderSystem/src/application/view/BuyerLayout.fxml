@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.BuyerLayoutController">
+   <children>
+      <BorderPane prefHeight="550.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane dividerPositions="0.22950819672131148" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane maxWidth="330.0" minHeight="0.0" minWidth="230.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5824175824175825" layoutX="60.0" layoutY="154.0" orientation="VERTICAL" prefHeight="548.0" prefWidth="279.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <BorderPane prefHeight="285.0" prefWidth="277.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <center>
+                                          <TableView fx:id="boughtTable" pickOnBounds="false" prefHeight="238.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                                            <columns>
+                                              <TableColumn fx:id="boughtNameCol" maxWidth="1000.0" minWidth="100.0" prefWidth="102.0" text="Name" />
+                                              <TableColumn fx:id="boughtPriceCol" maxWidth="45.0" minWidth="35.0" prefWidth="40.0" text="Price" />
+                                                <TableColumn fx:id="boughtCountCol" maxWidth="60.0" minWidth="35.0" prefWidth="60.0" text="Amount" />
+                                                <TableColumn fx:id="boughtTotalCol" maxWidth="60.0" minWidth="35.0" prefWidth="48.0" text="Total" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </center>
+                                       <bottom>
+                                          <AnchorPane prefHeight="12.0" prefWidth="277.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label contentDisplay="CENTER" text="Total:" wrapText="true" AnchorPane.leftAnchor="5.0">
+                                                   <font>
+                                                      <Font name="Microsoft YaHei Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sumPrice" text="0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0">
+                                                   <font>
+                                                      <Font name="Microsoft YaHei" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                       <top>
+                                          <Label text="Selected Food" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Microsoft YaHei Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                    </BorderPane>
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="277.0">
+                                 <children>
+                                    <Button fx:id="decreaseBtn" mnemonicParsing="false" onAction="#handleDecreaseBtn" text="Decrease" AnchorPane.leftAnchor="30.0" maxWidth="100.0" AnchorPane.topAnchor="25.0">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="increaseBtn" mnemonicParsing="false" onAction="#handleIncreaseBtn" text="Increase" AnchorPane.rightAnchor="30.0" maxWidth="100.0" AnchorPane.topAnchor="25.0">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="delBtn" mnemonicParsing="false" onAction="#handleDelBtn" text="Delete" AnchorPane.leftAnchor="30.0"  maxWidth="100.0" AnchorPane.topAnchor="80.0">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="payBtn" mnemonicParsing="false" onAction="#handlePayBtn" text="Pay" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="130.0">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="clearBtn" layoutX="143.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleClearBtn" text="Clear" AnchorPane.rightAnchor="30.0" maxWidth="100.0" AnchorPane.topAnchor="80.0">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="548.0" prefWidth="479.0">
+                     <children>
+                        <BorderPane prefHeight="548.0" prefWidth="626.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <SplitPane dividerPositions="0.5160523186682521" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <items>
+                                    <TabPane prefHeight="499.0" prefWidth="183.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Staple">
+                                             <content>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="stapleTable" onMouseExited="#handleStapleMouseExits" prefHeight="534.0" prefWidth="442.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="stapleIdTableCol" maxWidth="150.0" minWidth="50.0" prefWidth="100.0" text="Id" />
+                                                          <TableColumn fx:id="stapleNameTableCol" maxWidth="300.0" minWidth="100.0" prefWidth="150.0" text="Name" />
+                                                            <TableColumn fx:id="staplePriceTableCol" maxWidth="100.0" minWidth="40.0" prefWidth="60.0" text="Price" />
+                                                            <TableColumn fx:id="stapleCountTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="70.0" text="Amount" />
+                                                            <TableColumn fx:id="stapleBtnTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="75.0" text="Pay" />
+                                                        </columns>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                         <columnResizePolicy>
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                        </Tab>
+                                        <Tab text="Vegetables">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="vegetablesTable" onMouseExited="#handleVegetablesMouseExits" prefHeight="534.0" prefWidth="442.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnResizePolicy>
+                                                         </columnResizePolicy>
+                                                         <columns>
+                                                            <TableColumn fx:id="vegetablesIdTableCol" maxWidth="150.0" minWidth="50.0" prefWidth="100.0" text="Id" />
+                                                            <TableColumn fx:id="vegetablesNameTableCol" maxWidth="280.0" minWidth="60.0" prefWidth="150.0" text="Name" />
+                                                            <TableColumn fx:id="vegetablesPriceTableCol" maxWidth="100.0" minWidth="40.0" prefWidth="60.0" text="Price" />
+                                                            <TableColumn fx:id="vegetablesCountTableCol" maxWidth="100.0" minWidth="65.0" prefWidth="70.0" text="Amount" />
+                                                            <TableColumn fx:id="vegetablesBtnTableCol" maxWidth="80.0" minWidth="50.0" prefWidth="75.0" text="Pay" />
+                                                         </columns>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </TableView>
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab text="Meat">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="meatTable" onMouseExited="#handleMeatMouseExits" prefHeight="534.0" prefWidth="442.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnResizePolicy>
+                                                         </columnResizePolicy>
+                                                         <columns>
+                                                            <TableColumn fx:id="meatIdTableCol" maxWidth="150.0" minWidth="50.0" prefWidth="100.0" text="Id" />
+                                                            <TableColumn fx:id="meatNameTableCol" maxWidth="170.0" minWidth="100.0" prefWidth="150.0" text="Name" />
+                                                            <TableColumn fx:id="meatPriceTableCol" maxWidth="100.0" minWidth="40.0" prefWidth="60.0" text="Price" />
+                                                            <TableColumn fx:id="meatCountTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="70.0" text="Amount" />
+                                                            <TableColumn fx:id="meatBtnTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="75.0" text="Pay" />
+                                                         </columns>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </TableView>
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="Gruel">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TableView fx:id="gruelTable" onMouseExited="#handleGruelMouseExits" prefHeight="534.0" prefWidth="442.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columnResizePolicy>
+                                                         </columnResizePolicy>
+                                                         <columns>
+                                                            <TableColumn fx:id="gruelIdTableCol" maxWidth="150.0" minWidth="50.0" prefWidth="100.0" text="Id" />
+                                                            <TableColumn fx:id="gruelNameTableCol" maxWidth="170.0" minWidth="100.0" prefWidth="150.0" text="Name" />
+                                                            <TableColumn fx:id="gruelPriceTableCol" maxWidth="100.0" minWidth="40.0" prefWidth="60.0" text="Price" />
+                                                            <TableColumn fx:id="gruelCountTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="70.0" text="Amount" />
+                                                            <TableColumn fx:id="gruelBtnTableCol" maxWidth="100.0" minWidth="50.0" prefWidth="75.0" text="Pay" />
+                                                         </columns>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </TableView>
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TabPane>
+                                  <AnchorPane maxWidth="500.0" minHeight="0.0" minWidth="350.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <BorderPane  fx:id="orderHistory" prefHeight="463.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                              <top>
+                                                     <HBox alignment="CENTER" layoutX="88.0" layoutY="-28.0" spacing="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                                         <children>
+                                                            <Label text="Order history" BorderPane.alignment="CENTER">
+                                                                <font>
+                                                                   <Font name="Microsoft YaHei Bold" size="16.0" />
+                                                                </font>
+                                                                <padding>
+                                                                   <Insets bottom="3.0" left="4.0" right="4.0" top="4.0" />
+                                                                </padding>
+                                                            </Label>                                    
+                                                             <Button fx:id="queryHistoryBtn" mnemonicParsing="false" onAction="#handleUpdateAndQueryOrderHistory"  text="Query">
+                                                               <font>
+                                                                   <Font name="Microsoft YaHei Bold" size="12.0" />
+                                                                </font>
+                                                             </Button>
+                                                            </children>
+                                                         </HBox>
+                                             
+                                            </top>
+                                             <center>
+                                                <TableView fx:id="orderHistoryTable" prefHeight="422.0" prefWidth="186.0" BorderPane.alignment="CENTER">
+                                                  <columns>
+                                                    <TableColumn fx:id="orderIdCol" maxWidth="165.0" minWidth="165.0" prefWidth="165.0" text="OrderId" />
+                                                    <TableColumn fx:id="orderPriceCol" maxWidth="100.0" minWidth="60.0" prefWidth="70.0" text="Total Price" />
+                                                      <TableColumn fx:id="orderTimeCol" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Order Time" />
+                                                      <TableColumn fx:id="orderChoiceCol" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" text="Select" />
+                                                  </columns>
+                                                   <columnResizePolicy>
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                             </center>
+                                 </BorderPane>
+                                <BorderPane fx:id="orderDetail" prefHeight="463.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <top>
+                                            <HBox alignment="CENTER" layoutX="88.0" layoutY="-28.0" spacing="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                                                <children>
+                                                            <Label text="Order Detail: " BorderPane.alignment="CENTER">
+                                                                <font>
+                                                                   <Font name="Microsoft YaHei Bold" size="16.0" />
+                                                                </font>
+                                                                <padding>
+                                                                   <Insets bottom="3.0" left="4.0" right="4.0" top="4.0" />
+                                                                </padding>
+                                                             </Label> 
+                                                              <Label fx:id="orderIdText" layoutX="10.0" layoutY="10.0" text="Label">
+                                                                <font>
+                                                                   <Font name="Microsoft JhengHei" size="16.0" />
+                                                                </font>
+                                                             </Label>     
+                                                    </children>
+                                                    </HBox>                              
+                                                </top>
+                                         
+                                    <center>
+                                       <TableView fx:id="orderDetailTable" editable="true" prefHeight="200.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+                                          <columns>
+                                             <TableColumn fx:id="detailIdCol" maxWidth="165.0" minWidth="165.0" prefWidth="165.0" text="DetailId" />
+                                             <TableColumn fx:id="detailNameCol" maxWidth="150.0" minWidth="70.0" prefWidth="90" text="Name" />
+                                             <TableColumn fx:id="detailPriceCol" maxWidth="100.0" minWidth="60.0" prefWidth="70" text="Price" />
+                                             <TableColumn fx:id="detailAmountCol" maxWidth="100.0" minWidth="40.0" prefWidth="50" text="amount" />
+                                             <!--<TableColumn fx:id="detailTotalCol" maxWidth="150.0" minWidth="60.0" prefWidth="80" text="amount" />-->
+                                          </columns>
+                                       </TableView>
+                                      
+                                    </center>
+                                    <bottom>  
+                                        <Button fx:id="backOrderHistory" mnemonicParsing="false" onAction="#handlebackOrderHistoryBtn" text="Back" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font name="Microsoft YaHei" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    </bottom>
+                                   
+                        </BorderPane>
+                            </children>
+
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="36.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" layoutX="88.0" layoutY="-28.0" spacing="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Label text="Current User：" textFill="#285f86">
+                           <font>
+                              <Font name="Microsoft YaHei" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="userName" layoutX="10.0" layoutY="10.0" text="Label">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="16.0" />
+                           </font>
+                        </Label>
+                        <!--<Button mnemonicParsing="false" onAction="#handleUpdatePwdBtn" style="-fx-background-color: rgb(200,220,245);" text="修改密码" />-->
+                        <Button mnemonicParsing="false" onAction="#handleExitBtn" text="Logout">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#handleAboutBtn" text="About">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+                  <Label layoutX="44.0" layoutY="11.0" text="Welcome to Order System" textFill="#1c6186" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="STXingkai" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="3.0">
+                     <image>
+                        <Image url="@bing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
