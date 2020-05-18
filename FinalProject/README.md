@@ -6,8 +6,11 @@ UI: This project was created using JavaFX，there are four .fxml documents in th
 LoginLayout.fxml
 ## Architecture: 
 Model { Buyer.java ,Seller.java, Food.java, CartFood.java, Order.java, Detail.java}
+
 Dao {BuyerDao.java ,SellerDAO.java,... }
+
 Servcie { BuyerService.java ,SellerService,...}
+
 Controller { BuyerLayoutController.java,LoginLayoutController.java,...} Views { The four .fxml documents in the UI }
 ## Required Elements:
 ## 1. Object Oriented Elements: 
